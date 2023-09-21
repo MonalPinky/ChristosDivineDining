@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   color: black !important;
+  text-align: right;
 }
 .backgroundcolor {
   background-color: #282c34;
@@ -16,7 +17,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1rem;
 }
 

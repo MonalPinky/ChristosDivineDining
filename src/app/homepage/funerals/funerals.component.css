@@ -14,7 +14,7 @@ body {
   margin: 0;
 }
 .Thumbnail {
-  background-image: url(../../assets/BG2.jpg);
+  /* background-image: url(../../assets/BG2.jpg); */
   /* height: 6cm; */
 }
 .grid {

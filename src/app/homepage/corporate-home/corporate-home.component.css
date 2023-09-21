@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
   color: black !important;
+  text-align: right;
 }
 .backgroundcolor {
   background-color: #282c34;

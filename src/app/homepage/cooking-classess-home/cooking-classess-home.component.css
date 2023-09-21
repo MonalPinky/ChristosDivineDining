@@ -12,10 +12,7 @@ h2 {
 body {
   margin: 0;
 }
-.Thumbnail {
-  background-image: url(../../assets/BG2.jpg);
-  height: 6cm;
-}
+
 .grid {
   display: grid;
   /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
