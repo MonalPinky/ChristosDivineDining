@@ -23,6 +23,10 @@ import { RecipesComponent } from './businesspages/recipes/recipes.component';
 import { PartiesComponent } from './services/parties/parties.component';
 import { CorporateComponent } from './corporate/corporate.component';
 import { CorsairchefComponent } from './services/corsairchef/corsairchef.component';
+import { FuneralinfoComponent } from './services/funeralinfo/funeralinfo.component';
+import { CookingclassComponent } from './services/cookingclass/cookingclass.component';
+// import { PartiesComponent } from './parties/parties.component';
+// import { CorsairchefComponent } from './corsairchef/corsairchef.component';
 
 const appRoutes: Routes = [
   { path: 'contact', component: ContactPageComponent },
@@ -30,6 +34,11 @@ const appRoutes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'testimonials', component: TestimonialsComponent },
   { path: 'recipes', component: RecipesComponent },
+  { path: 'funeral', component: FuneralinfoComponent },
+  { path: 'cookingclassess', component: CookingclassComponent },
+  { path: 'parties', component: PartiesComponent },
+  { path: 'corporate', component: CorporateComponent },
+  { path: 'corsairchef', component: CorsairchefComponent },
 ];
 @NgModule({
   declarations: [
