@@ -13,7 +13,13 @@
 
   color: white;
 }
-
+.navbar-nav > li > .dropdown-menu {
+  background-color: #282c34;
+}
+.dropdown-menu > li > a:hover {
+  background-image: none;
+  background-color: #454545;
+}
 .header {
   padding-bottom: 2%;
   background-image: url(../../assets/4.jpg);
