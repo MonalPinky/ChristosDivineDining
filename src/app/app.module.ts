@@ -21,7 +21,7 @@ import { AboutusComponent } from './businesspages/aboutus/aboutus.component';
 import { TestimonialsComponent } from './businesspages/testimonials/testimonials.component';
 import { RecipesComponent } from './businesspages/recipes/recipes.component';
 import { PartiesComponent } from './services/parties/parties.component';
-import { CorporateComponent } from './corporate/corporate.component';
+import { CorporateComponent } from './services/corporate/corporate.component';
 import { CorsairchefComponent } from './services/corsairchef/corsairchef.component';
 import { FuneralinfoComponent } from './services/funeralinfo/funeralinfo.component';
 import { CookingclassComponent } from './services/cookingclass/cookingclass.component';

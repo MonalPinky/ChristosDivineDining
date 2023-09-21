@@ -1,9 +1,19 @@
 * {
   box-sizing: border-box;
-  color: black !important;
+  /* color: black !important; */
 }
 .backgroundcolor {
   background-color: #282c34;
+  box-shadow: 5px 5px 5px 5px #d2d1d1;
+}
+.Right {
+  text-align: center;
+  color: black !important;
+}
+.centre {
+  text-align: center;
+
+  margin-top: 5%;
 }
 h2 {
   margin-top: 2%;
@@ -13,9 +23,9 @@ h2 {
 body {
   margin: 0;
 }
-.Thumbnail {
-  /* background-image: url(../../assets/BG2.jpg); */
-  /* height: 6cm; */
+a {
+  color: black !important;
+  font-weight: 900;
 }
 .grid {
   display: grid;
@@ -26,7 +36,7 @@ body {
 .img-wrapper {
   position: relative;
   overflow: hidden;
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
@@ -45,7 +55,7 @@ body {
   font-size: 1.5rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.4);
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }

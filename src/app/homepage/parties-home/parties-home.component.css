@@ -1,11 +1,26 @@
 * {
   box-sizing: border-box;
-  color: black !important;
-  text-align: right;
+
+  /* text-align: right; */
 }
+.Right {
+  text-align: center;
+  color: black !important;
+}
+.centre {
+  text-align: center;
+
+  margin-top: 5%;
+}
+a {
+  color: black !important;
+  font-weight: 900;
+}
+
 .backgroundcolor {
   background-color: #282c34;
 }
+
 h2 {
   text-align: right;
   margin-top: 3%;
@@ -14,7 +29,9 @@ h2 {
 body {
   margin: 0;
 }
-
+img {
+  /* opacity: 0.2; */
+}
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -33,14 +50,16 @@ body {
   object-fit: cover;
   object-position: center;
 }
-
+a {
+  text-align: center !important;
+}
 .img-wrapper > .content {
   position: absolute;
   inset: 0;
   font-size: 1.5rem;
   padding: 1rem;
   background: rgba(255, 255, 255, 0.4);
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
 }
