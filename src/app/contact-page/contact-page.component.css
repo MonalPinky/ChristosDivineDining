@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  padding: 2%;
+}
+* {
+  /* margin: 0.5% !important; */
+}
+.field {
+  margin-bottom: 2%;
+}
+form {
+  margin-bottom: 3%;
+}

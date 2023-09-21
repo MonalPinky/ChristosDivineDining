@@ -1,0 +1,31 @@
+#CenterNavbar {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slogon {
+  padding-top: 4%;
+}
+
+* {
+  /* background-color: aqua; */
+
+  color: white;
+}
+
+.header {
+  padding-bottom: 2%;
+  background-image: url(../../assets/4.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #454545;
+  background-size: cover;
+}
+li a {
+  color: white !important;
+  font-weight: bold !important;
+}
+li {
+  list-style: none;
+}
