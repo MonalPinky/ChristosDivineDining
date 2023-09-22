@@ -26,6 +26,7 @@ import { CorsairchefComponent } from './services/corsairchef/corsairchef.compone
 import { FuneralinfoComponent } from './services/funeralinfo/funeralinfo.component';
 import { CookingclassComponent } from './services/cookingclass/cookingclass.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
+import { ContactService } from './contact.service';
 // import { PartiesComponent } from './parties/parties.component';
 // import { CorsairchefComponent } from './corsairchef/corsairchef.component';
 
@@ -71,7 +72,7 @@ const appRoutes: Routes = [
     HttpClientModule,
     NgbTooltipModule,
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

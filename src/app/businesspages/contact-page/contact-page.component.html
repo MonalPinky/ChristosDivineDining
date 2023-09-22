@@ -59,10 +59,15 @@
       <div class="field">
         <div class="form-group">
           <!-- <label for="exampleFormControlSelect1">Example select</label> -->
-          <select class="form-control" required>
+          <select
+            class="form-control"
+            #contact
+            required
+            (change)="onSelected(contact.value)"
+          >
             <option value="" disabled selected hidden>Subject*</option>
-            <option>Get A quote</option>
-            <option>Want to chat</option>
+            <option value="Get A quote">Get A quote</option>
+            <option value="Want to chat">Want to chat</option>
           </select>
         </div>
       </div>

@@ -33,6 +33,7 @@
 li a {
   color: white !important;
   font-weight: 900 !important;
+  font-size: large;
 }
 li {
   list-style: none;

@@ -11,3 +11,7 @@ h1 {
 form {
   margin-bottom: 3%;
 }
+select {
+  background-color: white !important;
+  color: #6c757d !important;
+}
