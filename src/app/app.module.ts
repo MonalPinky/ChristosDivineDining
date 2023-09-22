@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -25,6 +25,7 @@ import { CorporateComponent } from './services/corporate/corporate.component';
 import { CorsairchefComponent } from './services/corsairchef/corsairchef.component';
 import { FuneralinfoComponent } from './services/funeralinfo/funeralinfo.component';
 import { CookingclassComponent } from './services/cookingclass/cookingclass.component';
+import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 // import { PartiesComponent } from './parties/parties.component';
 // import { CorsairchefComponent } from './corsairchef/corsairchef.component';
 
@@ -67,6 +68,8 @@ const appRoutes: Routes = [
     NgbModule,
     FormsModule,
     RouterModule.forRoot(appRoutes),
+    HttpClientModule,
+    NgbTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

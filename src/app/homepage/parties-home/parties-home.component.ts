@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-parties-home',
@@ -7,6 +7,11 @@ import { Component } from '@angular/core';
 })
 export class PartiesHomeComponent {
   width = '';
+  pronmptsize;
+  tipconent = '';
+  showInbeginin = true;
+  fontsize;
+  centretext;
   constructor() {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -14,10 +19,19 @@ export class PartiesHomeComponent {
       )
     ) {
       // true for mobile device
-      this.width = '20%';
+      this.width = '7cm';
+
+      this.tipconent = 'Click me!';
+      this.fontsize = '20px';
+      this.centretext = 'center';
+      // this.pronmptsize = '100px';
+      // this.showInbeginin = false;
     } else {
       // false for not mobile device
-      this.width = '7cm';
+      this.width = '9cm';
+      this.tipconent = 'Hover over me!';
+      this.centretext = 'Right';
     }
+    // this.showInbeginin = false;
   }
 }

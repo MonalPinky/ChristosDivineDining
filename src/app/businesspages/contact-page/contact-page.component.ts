@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-page',
@@ -8,7 +9,12 @@ import { Component } from '@angular/core';
 export class ContactPageComponent {
   showMSG = false;
   number = 0;
+  name = '';
+  email = '';
+  phonenumber = '';
+  message = '';
   optionchoice = '';
+  SendData() {}
   optionValidation() {
     if (this.optionchoice === 'Subject*') {
       alert('Please select a Subject');

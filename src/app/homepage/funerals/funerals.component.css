@@ -5,6 +5,8 @@
 .backgroundcolor {
   background-color: #282c34;
   box-shadow: 5px 5px 5px 5px #d2d1d1;
+  background-image: url(../../../assets/Funeral.jpeg);
+  background-size: cover;
 }
 .Right {
   text-align: center;

@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class CookingClassessHomeComponent {
   width = '';
+  fontsize;
+  centretext;
   constructor() {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -14,10 +16,13 @@ export class CookingClassessHomeComponent {
       )
     ) {
       // true for mobile device
-      this.width = '20%';
+      this.width = '7cm';
+      this.fontsize = '20px';
+      this.centretext = 'center';
     } else {
       // false for not mobile device
-      this.width = '7cm';
+      this.width = '9cm';
+      this.centretext = 'left';
     }
   }
 }

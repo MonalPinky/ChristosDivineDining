@@ -15,10 +15,12 @@
 }
 .navbar-nav > li > .dropdown-menu {
   background-color: #282c34;
+  opacity: 0.8;
 }
 .dropdown-menu > li > a:hover {
   background-image: none;
   background-color: #454545;
+  opacity: 0.9;
 }
 .header {
   padding-bottom: 2%;
@@ -30,8 +32,20 @@
 }
 li a {
   color: white !important;
-  font-weight: bold !important;
+  font-weight: 900 !important;
 }
 li {
   list-style: none;
+}
+.animate {
+  animation: slide-in 0.7s both;
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(2%);
+  }
 }

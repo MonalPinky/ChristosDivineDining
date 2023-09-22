@@ -24,6 +24,7 @@
           class="form-control"
           placeholder="Name*"
           required
+          [(ngModel)]="name"
         />
       </div>
       <!-- email -->
@@ -36,6 +37,7 @@
           class="form-control"
           (input)="showmsg()"
           required
+          [(ngModel)]="email"
         />
         <p *ngIf="showMSG">We'll never share your email with anyone else.</p>
         <!-- <small id="emailHelp" class="form-text text-muted"
@@ -50,6 +52,7 @@
           placeholder="Phone Number*"
           class="form-control"
           required
+          [(ngModel)]="phonenumber"
         />
       </div>
       <!-- Subject -->
@@ -71,13 +74,21 @@
           class="form-control"
           placeholder="Message*"
           required
+          [(ngModel)]="message"
         ></textarea>
       </div>
       <!-- submit  -->
-      <button type="submit" class="btn btn-secondary btn-lg">Submit!</button>
+      <button
+        type="submit"
+        class="btn btn-secondary btn-lg"
+        (click)="SendData()"
+      >
+        Submit!
+      </button>
     </form>
   </div>
 </section>
+
 <script
   src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
   integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"

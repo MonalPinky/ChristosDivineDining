@@ -4,6 +4,8 @@
 .backgroundcolor {
   background-color: #282c34;
   box-shadow: 5px 5px 5px 5px #d2d1d1;
+  background-image: url(../../../assets/Corsair.jpg);
+  background-size: cover;
 }
 h2 {
   text-align: right;
