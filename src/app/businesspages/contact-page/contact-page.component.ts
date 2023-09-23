@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-// import { HttpClient } from '@angular/common/http';
-// import { MailService } from '@sendgrid/mail';
-// import { EmailService } from './email.service';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
-declare function Sendgrid(text: any): void;
+@Injectable({
+  providedIn: 'root',
+})
 @Component({
   selector: 'app-contact-page',
   templateUrl: './contact-page.component.html',
@@ -22,6 +23,7 @@ export class ContactPageComponent {
   msg;
 
   // constructor(private http: HttpClient, private emailService: EmailService) {}
+  constructor(private http: HttpClient) {}
 
   //Email api
   SendData() {
@@ -34,7 +36,18 @@ export class ContactPageComponent {
       this.subject +
       '\nmessage: ' +
       this.message;
-    Sendgrid(this.msg);
+    const saveData = {
+      email: 'duplooyzak2@gmail.com',
+    };
+
+    this.http
+      .post<{ message: string }>(
+        'http://192.168.3.101:4200/subscribe/',
+        saveData
+      )
+      .subscribe((respaanse) => {
+        console.log(respaanse.message);
+      });
   }
 
   ///Gets data for subject

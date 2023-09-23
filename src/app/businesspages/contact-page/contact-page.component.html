@@ -15,7 +15,11 @@
 <section class="section">
   <div class="container">
     <!-- form  -->
-    <form action="" ngNativeValidate>
+    <form
+      action="https://formsubmit.co/duplooyzak2@gmail.com"
+      method="POST"
+      ngNativeValidate
+    >
       <!-- name -->
       <div class="field">
         <input
@@ -64,6 +68,7 @@
             #contact
             required
             (change)="onSelected(contact.value)"
+            name="object"
           >
             <option value="" disabled selected hidden>Subject*</option>
             <option value="Get A quote">Get A quote</option>
@@ -83,13 +88,8 @@
         ></textarea>
       </div>
       <!-- submit  -->
-      <button
-        type="submit"
-        class="btn btn-secondary btn-lg"
-        (click)="SendData()"
-      >
-        Submit!
-      </button>
+
+      <button type="submit" class="btn btn-secondary btn-lg">Submit!</button>
     </form>
   </div>
 </section>

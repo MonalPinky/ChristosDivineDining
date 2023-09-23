@@ -14,7 +14,7 @@ export class ContactService {
     };
 
     this.http
-      .post<{ message: string }>('http://localhost:9696/subscribe/', saveData)
+      .post<{ message: string }>('http:///subscribe/', saveData)
       .subscribe((respaanse) => {
         console.log(respaanse.message);
       });
