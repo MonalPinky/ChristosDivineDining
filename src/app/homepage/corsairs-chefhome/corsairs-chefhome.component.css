@@ -5,12 +5,14 @@
   background-color: #282c34;
   box-shadow: 5px 5px 5px 5px #d2d1d1;
   background-image: url(../../../assets/corsair2.jpg);
+  background-position: 0px -270px;
   background-size: cover;
 }
 h2 {
   text-align: right;
   margin-top: 3%;
   margin-right: 7%;
+  font-weight: 900;
 }
 body {
   margin: 0;

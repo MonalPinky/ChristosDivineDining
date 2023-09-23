@@ -46,13 +46,14 @@ a {
 
 .backgroundcolor {
   background-color: #282c34;
-  background-image: url(../../../assets/party2.jpg);
+  background-image: url(../../../assets/Partytest.jpg);
   background-size: cover;
 }
 
 h2 {
   margin-top: 3%;
   margin-right: 7%;
+  font-weight: 900;
 }
 body {
   margin: 0;
