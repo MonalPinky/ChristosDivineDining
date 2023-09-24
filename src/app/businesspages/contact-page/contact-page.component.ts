@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { ContactService } from 'src/app/contact.service';
 
 @Injectable({
   providedIn: 'root',
@@ -23,8 +24,9 @@ export class ContactPageComponent {
   msg;
 
   // constructor(private http: HttpClient, private emailService: EmailService) {}
-  constructor(private http: HttpClient) {}
+  constructor(private contact: ContactService) {}
 
+  // https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular-node#prerequisites
   //Email api
   SendData() {
     this.msg =
@@ -36,18 +38,20 @@ export class ContactPageComponent {
       this.subject +
       '\nmessage: ' +
       this.message;
-    const saveData = {
-      email: 'duplooyzak2@gmail.com',
-    };
-
-    this.http
-      .post<{ message: string }>(
-        'http://192.168.3.101:4200/subscribe/',
-        saveData
-      )
-      .subscribe((respaanse) => {
-        console.log(respaanse.message);
-      });
+    console.log(this.msg);
+    this.contact.sendEmail(this.msg).subscribe(
+      () => {
+        alert('Email sent successfully!');
+        this.name = '';
+        this.email = '';
+        this.subject = '';
+        this.message = '';
+      },
+      (error) => {
+        console.error('Error sending email:', error);
+        alert('Error sending email. Please try again later.');
+      }
+    );
   }
 
   ///Gets data for subject
