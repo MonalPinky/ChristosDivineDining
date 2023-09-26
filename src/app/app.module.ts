@@ -69,14 +69,11 @@ const appRoutes: Routes = [
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forRoot(appRoutes, { useHash: true }),
     HttpClientModule,
     NgbTooltipModule,
   ],
-  providers: [
-    ContactService,
-    { provide: LocationStrategy, useClass: HashLocationStrategy },
-  ],
+  providers: [ContactService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
