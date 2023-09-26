@@ -27,6 +27,7 @@ import { FuneralinfoComponent } from './services/funeralinfo/funeralinfo.compone
 import { CookingclassComponent } from './services/cookingclass/cookingclass.component';
 import { NgbTooltipModule } from '@ng-bootstrap/ng-bootstrap';
 import { ContactService } from './contact.service';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 // import { PartiesComponent } from './parties/parties.component';
 // import { CorsairchefComponent } from './corsairchef/corsairchef.component';
 
@@ -72,7 +73,10 @@ const appRoutes: Routes = [
     HttpClientModule,
     NgbTooltipModule,
   ],
-  providers: [ContactService],
+  providers: [
+    ContactService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
