@@ -28,7 +28,7 @@ export class ContactPageComponent {
 
   // https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular-node#prerequisites
   //Email api
-  SendData() {
+  Validate() {
     this.msg =
       'Name: ' +
       this.name +
@@ -39,6 +39,14 @@ export class ContactPageComponent {
       '\nmessage: ' +
       this.message;
     console.log(this.msg);
+    if (
+      this.msg !=
+      'Name: ' + '' + '\nEmail: ' + '' + '\nSubject: ' + '' + '\nmessage: ' + ''
+    ) {
+      this.senddata();
+    }
+  }
+  senddata() {
     this.contact.sendEmail(this.msg).subscribe(
       () => {
         alert('Email sent successfully!');
@@ -53,7 +61,6 @@ export class ContactPageComponent {
       }
     );
   }
-
   ///Gets data for subject
   onSelected(contact) {
     this.subject = contact;

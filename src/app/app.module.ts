@@ -31,7 +31,7 @@ import { ContactService } from './contact.service';
 // import { CorsairchefComponent } from './corsairchef/corsairchef.component';
 
 const appRoutes: Routes = [
-  { path: 'ChristosDivineDining/contact', component: ContactPageComponent },
+  { path: 'contact', component: ContactPageComponent },
   { path: '', component: HomepageComponent },
   { path: 'aboutus', component: AboutusComponent },
   { path: 'testimonials', component: TestimonialsComponent },
