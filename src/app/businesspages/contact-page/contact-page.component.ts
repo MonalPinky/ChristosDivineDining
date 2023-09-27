@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContactService } from 'src/app/contact.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.development';
 @Injectable({
   providedIn: 'root',
 })
@@ -23,7 +23,12 @@ export class ContactPageComponent {
   subject = '';
   optionchoice = '';
   msg;
-
+  private telegarurl =
+    'https://api.telegram.org/bot' +
+    environment.sendGridKey +
+    '/sendMessage?chat_id=' +
+    environment.chatgroup +
+    '&text=';
   // constructor(private http: HttpClient, private emailService: EmailService) {}
   constructor(private http: HttpClient, private service: ContactService) {}
 
@@ -51,14 +56,7 @@ export class ContactPageComponent {
       this.message != ''
     ) {
       console.log('MSG SEND');
-      const req = this.http.get(
-        'https://api.telegram.org/bot' +
-          environment.sendGridKey +
-          '/sendMessage?chat_id=' +
-          environment.chatgroup +
-          '&text=' +
-          this.msg
-      );
+      const req = this.http.get(this.telegarurl + this.msg);
       req.subscribe();
       alert(
         'Your message has been sent we will come back to you as soon as possible'
