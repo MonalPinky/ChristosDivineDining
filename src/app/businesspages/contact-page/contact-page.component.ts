@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContactService } from 'src/app/contact.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
-import { environment } from 'src/environments/environment.development';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
