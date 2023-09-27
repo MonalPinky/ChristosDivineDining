@@ -23,17 +23,9 @@ export class ContactPageComponent {
   subject = '';
   optionchoice = '';
   msg;
-  private telegarurl =
-    'https://api.telegram.org/bot' +
-    environment.sendGridKey +
-    '/sendMessage?chat_id=' +
-    environment.chatgroup +
-    '&text=';
-  // constructor(private http: HttpClient, private emailService: EmailService) {}
+
   constructor(private http: HttpClient, private service: ContactService) {}
 
-  // https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular-node#prerequisites
-  //Email api
   Validate() {
     this.msg =
       'Name: ' +
@@ -45,9 +37,7 @@ export class ContactPageComponent {
       ' |\nmessage: ' +
       this.message;
     console.log(this.msg);
-    this.service.getData().subscribe((data) => {
-      console.log(data);
-    });
+
     if (
       this.name != '' &&
       this.email != '' &&
@@ -56,8 +46,8 @@ export class ContactPageComponent {
       this.message != ''
     ) {
       console.log('MSG SEND');
-      const req = this.http.get(this.telegarurl + this.msg);
-      req.subscribe();
+
+      this.service.getData(this.msg);
       alert(
         'Your message has been sent we will come back to you as soon as possible'
       );
