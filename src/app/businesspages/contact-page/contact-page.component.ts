@@ -3,7 +3,8 @@ import { FormsModule } from '@angular/forms';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { ContactService } from 'src/app/contact.service';
-
+import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
+import { environment } from 'src/environments/environment.development';
 @Injectable({
   providedIn: 'root',
 })
@@ -24,7 +25,7 @@ export class ContactPageComponent {
   msg;
 
   // constructor(private http: HttpClient, private emailService: EmailService) {}
-  constructor(private contact: ContactService) {}
+  constructor(private http: HttpClient, private service: ContactService) {}
 
   // https://www.simplilearn.com/tutorials/angular-tutorial/what-is-angular-node#prerequisites
   //Email api
@@ -32,36 +33,44 @@ export class ContactPageComponent {
     this.msg =
       'Name: ' +
       this.name +
-      '\nEmail: ' +
+      ' |\nEmail: ' +
       this.email +
-      '\nSubject: ' +
+      ' |\nSubject: ' +
       this.subject +
-      '\nmessage: ' +
+      ' |\nmessage: ' +
       this.message;
     console.log(this.msg);
+    this.service.getData().subscribe((data) => {
+      console.log(data);
+    });
     if (
-      this.msg !=
-      'Name: ' + '' + '\nEmail: ' + '' + '\nSubject: ' + '' + '\nmessage: ' + ''
+      this.name != '' &&
+      this.email != '' &&
+      this.phonenumber != '' &&
+      this.subject != '' &&
+      this.message != ''
     ) {
-      this.senddata();
+      console.log('MSG SEND');
+      const req = this.http.get(
+        'https://api.telegram.org/bot' +
+          environment.sendGridKey +
+          '/sendMessage?chat_id=' +
+          environment.chatgroup +
+          '&text=' +
+          this.msg
+      );
+      req.subscribe();
+      alert(
+        'Your message has been sent we will come back to you as soon as possible'
+      );
+      this.name = '';
+      this.email = '';
+      this.phonenumber = '';
+      this.subject = '';
+      this.message = '';
     }
   }
-  senddata() {
-    this.contact.sendEmail(this.msg).subscribe(
-      () => {
-        alert('Email sent successfully!');
-        this.name = '';
-        this.email = '';
-        this.subject = '';
-        this.message = '';
-      },
-      (error) => {
-        console.error('Error sending email:', error);
-        alert('Error sending email. Please try again later.');
-      }
-    );
-  }
-  ///Gets data for subject
+
   onSelected(contact) {
     this.subject = contact;
   }

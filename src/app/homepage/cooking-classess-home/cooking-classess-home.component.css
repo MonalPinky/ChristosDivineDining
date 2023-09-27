@@ -67,7 +67,7 @@ a {
   transition: 500ms ease-in-out;
 }
 
-.img-wrapper:hover > img.blur {
+.img-wrapper:hover > .backgroundcolor {
   filter: blur(5px);
 }
 
@@ -76,11 +76,11 @@ a {
 }
 
 .img-wrapper > .content.fade {
-  opacity: 0;
+  opacity: 0.5;
 }
 
 .img-wrapper:hover > .content.fade {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .img-wrapper > .content.slide-left {
