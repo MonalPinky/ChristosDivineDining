@@ -34,14 +34,18 @@
   text-align: center;
   color: black !important;
 }
+p {
+  font-weight: 500 !important;
+  color: white !important;
+}
 .centre {
   text-align: center;
 
   margin-top: 5%;
 }
 a {
-  color: black !important;
   font-weight: 900;
+  color: white !important;
 }
 
 .backgroundcolor {
@@ -87,7 +91,7 @@ a {
   inset: 0;
   font-size: 1.5rem;
   padding: 1rem;
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(123, 111, 111, 0.8);
   display: block;
   justify-content: center;
   align-items: center;
@@ -117,6 +121,7 @@ a {
 
 .img-wrapper > .content.slide-right {
   transform: translateX(100%);
+  /* background-color: #21252b; */
 }
 
 .img-wrapper:hover > .content.slide-right {
