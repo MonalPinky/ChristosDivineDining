@@ -23,7 +23,7 @@ export class ContactPageComponent {
   subject = '';
   optionchoice = '';
   msg;
-
+  city = '';
   constructor(private http: HttpClient, private service: ContactService) {
     window.scroll({
       top: 0,
@@ -38,6 +38,10 @@ export class ContactPageComponent {
       this.name +
       ' |\nEmail: ' +
       this.email +
+      ' |\nPhoneNumber: ' +
+      this.phonenumber +
+      ' |\nCity: ' +
+      this.city +
       ' |\nSubject: ' +
       this.subject +
       ' |\nmessage: ' +
@@ -49,14 +53,13 @@ export class ContactPageComponent {
       this.email != '' &&
       this.phonenumber != '' &&
       this.subject != '' &&
-      this.message != ''
+      this.message != '' &&
+      this.city != ''
     ) {
       console.log('MSG SEND');
 
       this.service.getData(this.msg);
-      alert(
-        'Your message has been sent we will come back to you as soon as possible'
-      );
+
       this.name = '';
       this.email = '';
       this.phonenumber = '';
