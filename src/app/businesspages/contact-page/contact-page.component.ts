@@ -5,6 +5,7 @@ import { HttpClient } from '@angular/common/http';
 import { ContactService } from 'src/app/contact.service';
 import emailjs, { EmailJSResponseStatus } from '@emailjs/browser';
 import { environment } from 'src/environments/environment.development';
+import { Title, Meta } from '@angular/platform-browser';
 @Injectable({
   providedIn: 'root',
 })
@@ -14,6 +15,10 @@ import { environment } from 'src/environments/environment.development';
   styleUrls: ['./contact-page.component.css'],
 })
 export class ContactPageComponent {
+  setSEOData(title: string, description: string) {
+    this.titleService.setTitle(title);
+    this.metaService.updateTag({ name: 'description', content: description });
+  }
   showMSG = false;
   number = 0;
   name = '';
@@ -24,12 +29,21 @@ export class ContactPageComponent {
   optionchoice = '';
   msg;
   city = '';
-  constructor(private http: HttpClient, private service: ContactService) {
+  constructor(
+    private http: HttpClient,
+    private service: ContactService,
+    private titleService: Title,
+    private metaService: Meta
+  ) {
     window.scroll({
       top: 0,
       left: 0,
       behavior: 'smooth',
     });
+    this.setSEOData(
+      'Contact',
+      'Want to get a quote for any function you can think of?'
+    );
   }
 
   Validate() {

@@ -69,7 +69,7 @@ const appRoutes: Routes = [
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    RouterModule.forRoot(appRoutes, { useHash: true }),
+    RouterModule.forRoot(appRoutes, { useHash: false }),
     HttpClientModule,
     NgbTooltipModule,
   ],
