@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 export class TestimonialsComponent {
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: title, content: description });
   }
   constructor(private titleService: Title, private metaService: Meta) {
     window.scroll({
@@ -18,7 +18,7 @@ export class TestimonialsComponent {
     });
     this.setSEOData(
       'Testimonials ',
-      'Information about Centurion based Catering company'
+      'what do the people say about centurion catering company christos divine dining?'
     );
   }
 }

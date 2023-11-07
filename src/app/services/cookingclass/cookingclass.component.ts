@@ -8,7 +8,7 @@ import { Title, Meta } from '@angular/platform-browser';
 export class CookingclassComponent {
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: title, content: description });
   }
   constructor(private titleService: Title, private metaService: Meta) {
     window.scroll({
@@ -18,7 +18,7 @@ export class CookingclassComponent {
     });
     this.setSEOData(
       'Cooking Classes ',
-      'Want to get information about our cooking classes'
+      'Want to get information about our cooking classes?'
     );
   }
 }

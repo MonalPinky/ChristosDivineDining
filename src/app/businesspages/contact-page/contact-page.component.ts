@@ -17,7 +17,11 @@ import { Title, Meta } from '@angular/platform-browser';
 export class ContactPageComponent {
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({
+      name: 'Contact us',
+      content:
+        'want to get a quote or learn more about centurion catering company christos divine dining ',
+    });
   }
   showMSG = false;
   number = 0;

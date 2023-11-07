@@ -9,7 +9,7 @@ import { Title, Meta } from '@angular/platform-browser';
 export class PartiesComponent {
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: title, content: description });
   }
   constructor(private titleService: Title, private metaService: Meta) {
     window.scroll({

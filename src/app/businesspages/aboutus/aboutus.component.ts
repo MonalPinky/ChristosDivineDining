@@ -14,7 +14,7 @@ export class AboutusComponent implements OnInit {
   }
   setSEOData(title: string, description: string) {
     this.titleService.setTitle(title);
-    this.metaService.updateTag({ name: 'description', content: description });
+    this.metaService.updateTag({ name: 'About centurion catering company christos divine dining ', content: 'want to learn more about christos divine dining?' });
   }
 
   ngOnInit(): void {
